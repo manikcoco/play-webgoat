@@ -2,9 +2,9 @@ name: Codacy Security Scan
 
 on:
   push:
-  workflow_dispatch:
-  schedule:
-    - cron: '20 17 * * *' # Sets Semgrep to scan every day at 17:20 UTC.
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
 
 jobs:
   codacy-security-scan:
